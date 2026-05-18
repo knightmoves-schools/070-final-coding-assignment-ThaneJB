@@ -14,6 +14,9 @@ class Game{
     }
         
     public bool IsValid(string guessedLetters){
-        return true;
+        if(guessedLetters > 10 || guessedLetters < 10 || guessedLetters == " "){
+            return false;
+        } 
+            return true;
     }
 }
