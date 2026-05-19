@@ -14,9 +14,11 @@ class Game{
     }
         
     public bool IsValid(string guessedLetters){
-        if(guessedLetters > 10 || guessedLetters < 10 || guessedLetters == " "){
-            return false;
+        int lettersAsInt = guessedLetters.Length;
+
+        if(lettersAsInt > 10 || lettersAsInt < 10 || guessedLetters.Contains(" ")){
+            return false; 
         } 
-            return true;
+            return true; 
     }
 }
