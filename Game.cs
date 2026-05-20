@@ -1,16 +1,32 @@
 class Game{
     // Make your changes in this file
 
-    public Game(string phrase)
-    {
+    public Game(string phrase){
+        this.phrase = phrase;
     }
 
     public string DisplayBlanks(){
-        return "_ _ _ _  _ _ _ _  _ _ _ _  _ _ _  _ _ _ _";
+        string result = " ";
+
+        foreach (char c in phrase){
+            if (c == ' '){
+                result += " ";
+            } else {
+                result += "_";
+            }
+        }
+
+        return result.TrimEnd();
+
+        
     }
 
     public string Play(char[] guessedLetters){
-        return "MAKE THIS WORK FOR REAL";
+
+
+
+
+        return ;
     }
         
     public bool IsValid(string guessedLetters){
@@ -20,6 +36,6 @@ class Game{
             return false; 
         } 
             return true; 
-            
+
     }
 }
